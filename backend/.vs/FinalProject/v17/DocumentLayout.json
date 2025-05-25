@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "H:\\FinalProject\\backend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{7FA12432-F235-4211-BBEA-56490FE6DA64}|BL\\BL.csproj|h:\\finalproject\\backend\\bl\\api\\newfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FA12432-F235-4211-BBEA-56490FE6DA64}|BL\\BL.csproj|solutionrelative:bl\\api\\newfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{357E5266-CE19-427F-8974-3394984513D8}|Server\\Server.csproj|h:\\finalproject\\backend\\server\\controllers\\workercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{357E5266-CE19-427F-8974-3394984513D8}|Server\\Server.csproj|solutionrelative:server\\controllers\\workercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -40,7 +44,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -49,6 +53,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "newFile.cs",
+              "DocumentMoniker": "H:\\FinalProject\\backend\\BL\\API\\newFile.cs",
+              "RelativeDocumentMoniker": "BL\\API\\newFile.cs",
+              "ToolTip": "H:\\FinalProject\\backend\\BL\\API\\newFile.cs",
+              "RelativeToolTip": "BL\\API\\newFile.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T11:24:27.835Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
@@ -60,7 +77,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "dbo.Customer [Data]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/H__FINALPROJECT_BACKEND_DAL_DATABASE_DB.MDF/True/SqlTable/dbo.Customer.sql",
               "ToolTip": "dbo.Customer [Data]",
@@ -69,7 +86,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "BL.csproj",
               "DocumentMoniker": "H:\\FinalProject\\backend\\BL\\BL.csproj",
               "RelativeDocumentMoniker": "BL\\BL.csproj",
@@ -81,7 +98,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "IBLWorker.cs",
               "DocumentMoniker": "H:\\FinalProject\\backend\\BL\\API\\IBLWorker.cs",
               "RelativeDocumentMoniker": "BL\\API\\IBLWorker.cs",
@@ -93,7 +110,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "BLWorkerService.cs",
               "DocumentMoniker": "H:\\FinalProject\\backend\\BL\\Services\\BLWorkerService.cs",
               "RelativeDocumentMoniker": "BL\\Services\\BLWorkerService.cs",
@@ -105,7 +122,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "BLCustomerService.cs",
               "DocumentMoniker": "H:\\FinalProject\\backend\\BL\\Services\\BLCustomerService.cs",
               "RelativeDocumentMoniker": "BL\\Services\\BLCustomerService.cs",
@@ -117,7 +134,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "WorkerController.cs",
               "DocumentMoniker": "H:\\FinalProject\\backend\\Server\\Controllers\\WorkerController.cs",
               "RelativeDocumentMoniker": "Server\\Controllers\\WorkerController.cs",
@@ -130,7 +147,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "BLManager.cs",
               "DocumentMoniker": "H:\\FinalProject\\backend\\BL\\BLManager.cs",
               "RelativeDocumentMoniker": "BL\\BLManager.cs",
@@ -142,7 +159,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "dbo.Worker [Data]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/H__FINALPROJECT_BACKEND_DAL_DATABASE_DB.MDF/True/SqlTable/dbo.Worker.sql",
               "ToolTip": "dbo.Worker [Data]",
