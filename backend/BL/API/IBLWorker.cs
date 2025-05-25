@@ -20,5 +20,6 @@ namespace BL.API
 
         public void Update(Worker item);
         public Worker GetWorkerById(int id);
+        public List<Appointment> GetWorkerAppList(int id);
     }
 }

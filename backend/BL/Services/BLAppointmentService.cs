@@ -50,9 +50,12 @@ namespace BL.Services
                 Console.WriteLine("appointment is empty");
                 return;
             }
+         
             appointment.Update(item);
         }
+      
     } 
+
     //public CustomerAppointment AddAppointment(string Specialty, Customer customer)
     //{
     //    List<Appointment> availableAppointment = new List<Appointment>();

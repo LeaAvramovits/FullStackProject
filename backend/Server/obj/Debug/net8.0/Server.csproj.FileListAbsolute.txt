@@ -333,3 +333,4 @@ H:\FinalProject\backend\Server\obj\Debug\net8.0\refint\Server.dll
 H:\FinalProject\backend\Server\obj\Debug\net8.0\Server.pdb
 H:\FinalProject\backend\Server\obj\Debug\net8.0\Server.genruntimeconfig.cache
 H:\FinalProject\backend\Server\obj\Debug\net8.0\ref\Server.dll
+H:\FinalProject\backend\Server\obj\Debug\net8.0\Server.sourcelink.json

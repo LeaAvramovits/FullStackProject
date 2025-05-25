@@ -41,17 +41,15 @@ namespace Dal.Services
             return dbManager.Appointments.ToList();
         }
 
-        public void Update(Appointment item)
+        public void Update(Appointment updatedItem)
         {
-           
-            var appointmentToUpDate = dbManager.Appointments.FirstOrDefault(a => a.Id == item.Id);
-            if (appointmentToUpDate == null)
+            var existing = dbManager.Appointments.FirstOrDefault(a => a.Id == updatedItem.Id);
+            if (existing != null)
             {
-                Console.WriteLine("appointment not found");
-                return;
+                existing.CustomerId = updatedItem.CustomerId;
+                // אפשר לעדכן גם שדות נוספים אם צריך
+                dbManager.SaveChanges();
             }
-            dbManager.Appointments.Update(item);
-            dbManager.SaveChanges();
         }
         public List<Appointment> GetAppointmentsByCustomerId(int customerId)
         {

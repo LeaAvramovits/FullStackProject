@@ -75,7 +75,11 @@ namespace BL.Services
         {
             return customer.GetCustomerById(id);
         }
-}
+        public List<Appointment> GetCustomerAppList(int id)
+        {
+            return appointment.Read().FindAll(a => a.CustomerId == id).ToList();
+        }
+    }
 
 
 }

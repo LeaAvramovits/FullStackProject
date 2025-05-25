@@ -1,24 +1,12 @@
-using BL;
 using BL.API;
-using Dal;
-
-//var builder = WebApplication.CreateBuilder(args);
-//var app = builder.Build();
-
-
-//app.MapGet("/", () => "Hello World!");
-
-//app.Run();
-using Dal.API;
+using BL;
 using Dal.models;
-using Dal.Services;
-using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
+
 builder.Services.AddControllers();
 builder.Services.AddScoped<DatabaseManager>();
-builder.Services.AddSingleton<IBL, BLManager>();
-builder.Services.AddControllers();
+builder.Services.AddScoped<IBL, BLManager>();
 
 builder.Services.AddCors(options =>
 {
@@ -29,11 +17,7 @@ builder.Services.AddCors(options =>
 });
 
 var app = builder.Build();
+
 app.UseCors("AllowAllOrigins");
-
-
-
-
-
 app.MapControllers();
 app.Run();

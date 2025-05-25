@@ -15,8 +15,10 @@ namespace BL.Services
     public class BLWorkerService:IBLWorker
     {
     IWorker worker;
+      IAppointment appointment;
         public BLWorkerService(IDal dal) {
         worker=dal.worker;
+        appointment = dal.appointment;
         }
     public void Create(Worker item)
     {
@@ -55,6 +57,11 @@ namespace BL.Services
         public Worker GetWorkerById(int id)
         {
             return worker.GetWorkerById(id);
+        }
+
+        public List<Appointment> GetWorkerAppList(int id)
+        {
+            return appointment.Read().FindAll(a => a.WorkerId == id).ToList().FindAll(a=>a.CustomerId!=null); 
         }
     }
 }

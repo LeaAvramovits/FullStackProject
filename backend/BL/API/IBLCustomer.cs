@@ -21,7 +21,7 @@ namespace BL.API
 
         public void Update(Customer item);
         public Customer GetCustomerById(int id);
-
+        public List<Appointment> GetCustomerAppList(int id);
 
     }
 }

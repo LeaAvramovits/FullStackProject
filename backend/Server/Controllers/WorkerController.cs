@@ -12,7 +12,7 @@ namespace Server.Controllers
     public class WorkerController : ControllerBase
     {
         IBLWorker blworker;
-        public WorkerController(IBL bl) 
+        public WorkerController(IBL bl)
         {
             blworker = bl.blWorker;
         }
@@ -36,16 +36,22 @@ namespace Server.Controllers
 
             blworker.Delete(deleteWorker);
         }
-           [HttpGet("check/{id}")]
+        [HttpGet("check/{id}")]
         public IActionResult CheckWorkerById(int id)
         {
             var customer = blworker.GetWorkerById(id);
             if (customer == null)
             {
-                return NotFound(new { message = "הלקוח אינו קיים במערכת" });
+                return NotFound(new { message = "העובד אינו קיים במערכת" });
             }
 
             return Ok(customer);
         }
+        [HttpGet("AppList/{id}")]
+        public ActionResult<List<Appointment>> GetWorkerAppList(int id)
+        {
+           return blworker.GetWorkerAppList(id);
+        }
+
     }
 }

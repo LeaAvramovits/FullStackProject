@@ -33,3 +33,4 @@ H:\FinalProject\backend\BL\obj\Debug\net8.0\refint\BL.dll
 H:\FinalProject\backend\BL\obj\Debug\net8.0\BL.pdb
 H:\FinalProject\backend\BL\obj\Debug\net8.0\BL.genruntimeconfig.cache
 H:\FinalProject\backend\BL\obj\Debug\net8.0\ref\BL.dll
+H:\FinalProject\backend\BL\obj\Debug\net8.0\BL.sourcelink.json

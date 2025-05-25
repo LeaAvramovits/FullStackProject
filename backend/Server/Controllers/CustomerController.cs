@@ -18,15 +18,34 @@ namespace Server.Controllers
 
         public CustomerController(IBL bL)
         {
-           //customer = dal.customer;
+            //customer = dal.customer;
             blCustomer = bL.blCustomer;
         }
         [HttpGet]
         public ActionResult<List<Customer>> GetCustomers() => blCustomer.Read();
 
-        [HttpPost]
-        public void CreateCustomer([FromBody] Customer newCustomer) {
-            blCustomer.Create(newCustomer);
+        //[HttpPost]
+        //public void CreateCustomer([FromBody] Customer newCustomer)
+        //{
+        //    blCustomer.Create(newCustomer);
+        //}
+
+
+        [HttpPost("add")]
+        //[Route("api/Customer")]
+        public IActionResult CreateCustomer([FromBody] Customer newCustomer)
+        {
+            try
+            {
+                // קריאה ללוגיקה העסקית להוספת לקוח
+              
+                blCustomer.Create(newCustomer);
+                return Ok(new { message = "הלקוח נוסף בהצלחה!" });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { message = "שגיאה בהוספת הלקוח.", error = ex.Message });
+            }
         }
 
         [HttpPut]
@@ -35,7 +54,8 @@ namespace Server.Controllers
             blCustomer.Update(updatedCustomer);
         }
         [HttpDelete]
-        public void DeleteCustomer([FromBody] Customer deleteCustomer) {
+        public void DeleteCustomer([FromBody] Customer deleteCustomer)
+        {
 
             blCustomer.Delete(deleteCustomer);
         }
@@ -55,6 +75,10 @@ namespace Server.Controllers
 
             return Ok(customer);
         }
-
+        [HttpGet("AppList/{id}")]
+        public ActionResult<List<Appointment>> GetCustomerAppList(int id)
+        {
+            return blCustomer.GetCustomerAppList(id);
+        }
     }
 }

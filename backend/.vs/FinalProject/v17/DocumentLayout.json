@@ -3,16 +3,8 @@
   "WorkspaceRootPath": "H:\\FinalProject\\backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EBAD06AC-01C5-4293-913D-74A11E8E0027}|Dal\\Dal.csproj|h:\\finalproject\\backend\\dal\\models\\databasemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EBAD06AC-01C5-4293-913D-74A11E8E0027}|Dal\\Dal.csproj|solutionrelative:dal\\models\\databasemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{357E5266-CE19-427F-8974-3394984513D8}|Server\\Server.csproj|h:\\finalproject\\backend\\server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{357E5266-CE19-427F-8974-3394984513D8}|Server\\Server.csproj|solutionrelative:server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{357E5266-CE19-427F-8974-3394984513D8}|Server\\Server.csproj|h:\\finalproject\\backend\\server\\server.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{357E5266-CE19-427F-8974-3394984513D8}|Server\\Server.csproj|solutionrelative:server\\server.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{357E5266-CE19-427F-8974-3394984513D8}|Server\\Server.csproj|h:\\finalproject\\backend\\server\\controllers\\workercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{357E5266-CE19-427F-8974-3394984513D8}|Server\\Server.csproj|solutionrelative:server\\controllers\\workercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7FA12432-F235-4211-BBEA-56490FE6DA64}|BL\\BL.csproj|h:\\finalproject\\backend\\bl\\services\\blworkerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -21,6 +13,24 @@
     {
       "AbsoluteMoniker": "D:0:0:{7FA12432-F235-4211-BBEA-56490FE6DA64}|BL\\BL.csproj|h:\\finalproject\\backend\\bl\\services\\blcustomerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7FA12432-F235-4211-BBEA-56490FE6DA64}|BL\\BL.csproj|solutionrelative:bl\\services\\blcustomerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/H__FINALPROJECT_BACKEND_DAL_DATABASE_DB.MDF/True/SqlTable/dbo.Customer.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/H__FINALPROJECT_BACKEND_DAL_DATABASE_DB.MDF/True/SqlTable/dbo.Worker.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FA12432-F235-4211-BBEA-56490FE6DA64}|BL\\BL.csproj|h:\\finalproject\\backend\\bl\\bl.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{7FA12432-F235-4211-BBEA-56490FE6DA64}|BL\\BL.csproj|solutionrelative:bl\\bl.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FA12432-F235-4211-BBEA-56490FE6DA64}|BL\\BL.csproj|h:\\finalproject\\backend\\bl\\api\\iblworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FA12432-F235-4211-BBEA-56490FE6DA64}|BL\\BL.csproj|solutionrelative:bl\\api\\iblworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FA12432-F235-4211-BBEA-56490FE6DA64}|BL\\BL.csproj|h:\\finalproject\\backend\\bl\\blmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FA12432-F235-4211-BBEA-56490FE6DA64}|BL\\BL.csproj|solutionrelative:bl\\blmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,76 +40,114 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DatabaseManager.cs",
-              "DocumentMoniker": "H:\\FinalProject\\backend\\Dal\\models\\DatabaseManager.cs",
-              "RelativeDocumentMoniker": "Dal\\models\\DatabaseManager.cs",
-              "ToolTip": "H:\\FinalProject\\backend\\Dal\\models\\DatabaseManager.cs",
-              "RelativeToolTip": "Dal\\models\\DatabaseManager.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAA5wBsAAACmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T12:30:38.737Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "H:\\FinalProject\\backend\\Server\\Program.cs",
-              "RelativeDocumentMoniker": "Server\\Program.cs",
-              "ToolTip": "H:\\FinalProject\\backend\\Server\\Program.cs",
-              "RelativeToolTip": "Server\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T12:25:14.012Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Server",
-              "DocumentMoniker": "H:\\FinalProject\\backend\\Server\\Server.csproj",
-              "RelativeDocumentMoniker": "Server\\Server.csproj",
-              "ToolTip": "H:\\FinalProject\\backend\\Server\\Server.csproj",
-              "RelativeToolTip": "Server\\Server.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-05-13T12:25:09.653Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "dbo.Customer [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/H__FINALPROJECT_BACKEND_DAL_DATABASE_DB.MDF/True/SqlTable/dbo.Customer.sql",
+              "ToolTip": "dbo.Customer [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-05-21T11:37:27.951Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BL.csproj",
+              "DocumentMoniker": "H:\\FinalProject\\backend\\BL\\BL.csproj",
+              "RelativeDocumentMoniker": "BL\\BL.csproj",
+              "ToolTip": "H:\\FinalProject\\backend\\BL\\BL.csproj",
+              "RelativeToolTip": "BL\\BL.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-05-21T11:36:50.687Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IBLWorker.cs",
+              "DocumentMoniker": "H:\\FinalProject\\backend\\BL\\API\\IBLWorker.cs",
+              "RelativeDocumentMoniker": "BL\\API\\IBLWorker.cs",
+              "ToolTip": "H:\\FinalProject\\backend\\BL\\API\\IBLWorker.cs",
+              "RelativeToolTip": "BL\\API\\IBLWorker.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABYAAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T11:23:00.722Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "BLWorkerService.cs",
               "DocumentMoniker": "H:\\FinalProject\\backend\\BL\\Services\\BLWorkerService.cs",
               "RelativeDocumentMoniker": "BL\\Services\\BLWorkerService.cs",
               "ToolTip": "H:\\FinalProject\\backend\\BL\\Services\\BLWorkerService.cs",
               "RelativeToolTip": "BL\\Services\\BLWorkerService.cs",
-              "ViewState": "AQIAACkAAAAAAAAAAAAIwC4AAAAFAAAA",
+              "ViewState": "AQIAADQAAAAAAAAAAAAcwEMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T12:24:59.114Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-21T11:22:58.704Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "BLCustomerService.cs",
               "DocumentMoniker": "H:\\FinalProject\\backend\\BL\\Services\\BLCustomerService.cs",
               "RelativeDocumentMoniker": "BL\\Services\\BLCustomerService.cs",
               "ToolTip": "H:\\FinalProject\\backend\\BL\\Services\\BLCustomerService.cs",
               "RelativeToolTip": "BL\\Services\\BLCustomerService.cs",
-              "ViewState": "AQIAADUAAAAAAAAAAAAIwAAAAAAAAAAA",
+              "ViewState": "AQIAADoAAAAAAAAAAAAcwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T12:24:52.654Z",
+              "WhenOpened": "2025-05-21T11:22:55.693Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "WorkerController.cs",
+              "DocumentMoniker": "H:\\FinalProject\\backend\\Server\\Controllers\\WorkerController.cs",
+              "RelativeDocumentMoniker": "Server\\Controllers\\WorkerController.cs",
+              "ToolTip": "H:\\FinalProject\\backend\\Server\\Controllers\\WorkerController.cs",
+              "RelativeToolTip": "Server\\Controllers\\WorkerController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T11:20:07.956Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "BLManager.cs",
+              "DocumentMoniker": "H:\\FinalProject\\backend\\BL\\BLManager.cs",
+              "RelativeDocumentMoniker": "BL\\BLManager.cs",
+              "ToolTip": "H:\\FinalProject\\backend\\BL\\BLManager.cs",
+              "RelativeToolTip": "BL\\BLManager.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T10:48:52.032Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "dbo.Worker [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/H__FINALPROJECT_BACKEND_DAL_DATABASE_DB.MDF/True/SqlTable/dbo.Worker.sql",
+              "ToolTip": "dbo.Worker [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-05-20T12:03:31.553Z"
             }
           ]
         }

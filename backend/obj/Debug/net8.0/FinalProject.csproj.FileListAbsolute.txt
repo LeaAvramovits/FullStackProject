@@ -12,3 +12,11 @@ H:\FinalProject\FinalProject\FinalProject\obj\Debug\net8.0\refint\FinalProject.d
 H:\FinalProject\FinalProject\FinalProject\obj\Debug\net8.0\FinalProject.pdb
 H:\FinalProject\FinalProject\FinalProject\obj\Debug\net8.0\FinalProject.genruntimeconfig.cache
 H:\FinalProject\FinalProject\FinalProject\obj\Debug\net8.0\ref\FinalProject.dll
+H:\FinalProject\backend\obj\Debug\net8.0\FinalProject.GeneratedMSBuildEditorConfig.editorconfig
+H:\FinalProject\backend\obj\Debug\net8.0\FinalProject.AssemblyInfoInputs.cache
+H:\FinalProject\backend\obj\Debug\net8.0\FinalProject.AssemblyInfo.cs
+H:\FinalProject\backend\obj\Debug\net8.0\FinalProject.csproj.CoreCompileInputs.cache
+H:\FinalProject\backend\obj\Debug\net8.0\FinalProject.sourcelink.json
+H:\FinalProject\backend\obj\Debug\net8.0\FinalProject.dll
+H:\FinalProject\backend\obj\Debug\net8.0\refint\FinalProject.dll
+H:\FinalProject\backend\obj\Debug\net8.0\FinalProject.pdb

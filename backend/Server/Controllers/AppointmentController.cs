@@ -21,7 +21,20 @@ namespace Server.Controllers
         appointment=bl.blAppointment;
         }
         [HttpGet]
-        public ActionResult<List<Appointment>> GetAppointments() => appointment.Read();
+        public ActionResult<List<Appointment>> GetAppointments()
+        {
+            try {
+                return appointment.Read();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { message = "שגיאה בהוספת הלקוח.", error = ex.ToString() });
+            }
+
+        } 
+
+
+       
 
         [HttpPost]
         public void CreateAppointment([FromBody] Appointment newAppointment)
@@ -29,10 +42,23 @@ namespace Server.Controllers
             appointment.Create(newAppointment);
         }
 
+        //[HttpPut]
+        //public void UpdateAppointment([FromBody] Appointment updatedAppointment,int id)
+        //{
+        //    appointment.Update(updatedAppointment,id);
+        //}
         [HttpPut]
-        public void UpdateAppointment([FromBody] Appointment updatedAppointment)
+        public IActionResult UpdateAppointment([FromBody] Appointment updatedAppointment)
         {
-            appointment.Update(updatedAppointment);
+            try
+            {
+                appointment.Update(updatedAppointment); // קריאה ל-BL בלבד!
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { message = "שגיאה בעדכון התור.", error = ex.ToString() });
+            }
         }
         [HttpDelete]
         public void DeleteAppointment([FromBody] Appointment deleteAppointment)
@@ -40,6 +66,7 @@ namespace Server.Controllers
 
             appointment.Delete(deleteAppointment);
         }
+
 
     }
 }
