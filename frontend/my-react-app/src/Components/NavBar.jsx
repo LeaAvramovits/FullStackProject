@@ -1,25 +1,48 @@
+import React from 'react';
+import { AppBar, Toolbar, Box, Button } from '@mui/material';
 import { Link } from 'react-router-dom';
 
 const NavBar = () => {
   return (
-    <nav style={styles.nav}>
-      <Link to="/" style={styles.link}>דף הבית</Link>
-      <Link to="/branches" style={styles.link}>סניפים</Link>
-    </nav>
+    <AppBar position="fixed" color="primary" sx={{ top: 0, width: '100%' }}>
+      <Toolbar sx={{ display: 'flex', justifyContent: 'center' }}>
+        <Box sx={{ display: 'flex', gap: 3 }}>
+          <Button
+            component={Link}
+            to="/"
+            color="inherit"
+            sx={styles.link}
+          >
+            Home Page
+          </Button>
+          <Button
+            component={Link}
+            to="/branches"
+            color="inherit"
+            sx={styles.link}
+          >
+            Branches
+          </Button>
+          <Button
+            component={Link}
+            to="/contact"
+            color="inherit"
+            sx={styles.link}
+          >
+            Log in
+          </Button>
+        </Box>
+      </Toolbar>
+    </AppBar>
   );
 };
 
 const styles = {
-  nav: {
-    padding: '10px',
-    backgroundColor: '#f0f0f0',
-    textAlign: 'center',
-  },
   link: {
-    margin: '0 15px',
-    textDecoration: 'none',
-    color: '#007BFF',
     fontSize: '18px',
+    fontWeight: 'bold',
+    textDecoration: 'none',
+    color: 'white',
   },
 };
 

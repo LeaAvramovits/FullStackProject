@@ -1,34 +1,77 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch } from "react-redux";
+import { setCurrentCustomer } from "../redux/customerSlice";
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
+import AccountCircle from '@mui/icons-material/AccountCircle';
 
 const HomePage = () => {
   const [id, setId] = useState('');
+  const [error, setError] = useState('');
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
-  const handleSubmit = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
-    if (id) {
-      navigate(`/personal-area/${id}`);
-    } else {
-      alert('אנא הזן תעודת זהות');
+    setError('');
+    if (!id) return;
+
+    try {
+      // בדוק אם לקוח
+      
+
+     
+      const customerResponse = await fetch(`http://localhost:5067/api/Customer/check/${id}`);
+      if (customerResponse.ok) {
+        const customerData = await customerResponse.json();
+        dispatch(setCurrentCustomer(customerData));
+        navigate(`/personal-area/${id}`);
+        return;
+      }
+       // בדוק אם עובד
+      const workerResponse = await fetch(`http://localhost:5067/api/Worker/check/${id}`);
+      if (workerResponse.ok) {
+        const workerData = await workerResponse.json();
+        navigate(`/worker-area/${workerData.id}`);
+        return;
+      }
+      // לא נמצא
+      navigate(`/contact`);
+      setError('תעודת הזהות לא נמצאה. אנא נסה שוב או פנה לתמיכה.');
+    } catch (err) {
+      setError('שגיאת שרת');
     }
   };
 
   return (
     <div style={styles.container}>
-      <h1 style={styles.title}>ברוך הבא</h1>
-      <form onSubmit={handleSubmit} style={styles.form}>
-        <label style={styles.label}>
-          תעודת זהות:
-          <input
-            type="text"
+      <h1 style={styles.title}>please enter your id number</h1>
+      {error && <div style={{ color: 'red', marginBottom: '10px' }}>{error}</div>}
+      <form onSubmit={handleLogin} style={styles.form}>
+        <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
+          <AccountCircle sx={{ color: 'action.active', mr: 1, my: 0.5 }} />
+          <TextField
+            id="input-with-sx"
+            label="id number"
+            variant="standard"
             value={id}
             onChange={(e) => setId(e.target.value)}
             style={styles.input}
             required
           />
-        </label>
-        <button type="submit" style={styles.button}>היכנס</button>
+        </Box>
+        <button
+          type="submit"
+          disabled={!id}
+          style={{
+            ...styles.button,
+            backgroundColor: id ? '#FF0000' : '#ccc',
+            cursor: id ? 'pointer' : 'not-allowed',
+          }}
+        >
+          Sign in
+        </button>
       </form>
     </div>
   );

@@ -5,10 +5,19 @@ const customerSlice=createSlice({
     name:"customer",
     initialState: {
         customerList: [],
+        currentCustomer: null
         // loading: false,
         // error: false
     },
-    reducers:{},
+    reducers:{
+    setCurrentCustomer: (state, action) => {
+  state.currentCustomer = action.payload; // שמור את כל האובייקט, או לפחות { id }
+  console.log("User ID:", action.payload.id); 
+},
+    logoutCustomer: (state) => {
+      state.currentCustomer = null;
+    },
+    },
     extraReducers:(builder) => {
         builder
             .addCase(fetchDataAsyncAction.pending, (state) => {
@@ -28,4 +37,5 @@ const customerSlice=createSlice({
             })
     }
 })
-export default customerSlice.reducer
+export const { setCurrentCustomer, logoutCustomer } = customerSlice.actions;
+export default customerSlice.reducer;
