@@ -1,46 +1,61 @@
-import { BrowserRouter, Link, NavLink, Route, Routes } from 'react-router-dom';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
+import Button from '@mui/material/Button';
 import './App.css';
-import Products from './components/Products';
-import Error from './components/Error';
-import About from './components/About';
-import Cart from './components/Cart';
-import * as React from 'react';
-import { styled } from '@mui/material/styles';
-import IconButton from '@mui/material/IconButton';
-import Badge, { badgeClasses } from '@mui/material/Badge';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCartOutlined';
-import { useSelector } from 'react-redux';
-const App = () => {
-  const CartBadge = styled(Badge)`
-  & .${badgeClasses.badge} {
-    top: -12px;
-    right: -6px;
-  }
-`;
+import Customer from './Components/Customer';
+import NavBar from './Components/NavBar';
+import PersonalArea from './Components/PersonalArea';
+import Branches from './Components/Branches';
+import HomePage from './Components/HomePage';
+import ContactPage from './Components/ContactPage';
+import Appointments from './Components/Appointment';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import WorkerArea from './Components/WorkerArea';
 
-const cart = useSelector(state => state.customers);
-// const totalCart=cart.length;
+// קומפוננטה עבור כפתור "חזור"
+function BackButton() {
+  const navigate = useNavigate();
   return (
-    <BrowserRouter>
-      <nav>
-        <NavLink to="/" >Products  </NavLink>
-        <NavLink to="/about" >About  </NavLink>
-        <NavLink to="/cart" >
-         <IconButton>
-           <ShoppingCartIcon fontSize="small" width="35px" height="35px" />
-           <CartBadge badgeContent={3} color="primary" overlap="circular" />
-         </IconButton> 
-       </NavLink>
-      </nav>
-      <Routes>
-        <Route path='/' element={<Products />} />
-        <Route path='/about' element={<About />} />
-        <Route path='/cart' element={<Cart />} />
-        <Route path='/error' element={<Error />}/>
-      </Routes>
-    </BrowserRouter>
+    <Button
+  variant="contained"
+  color="primary"
+  onClick={() => navigate(-1)}
+  sx={{
+    position: 'fixed',
+    top: 16,
+    right: 16,
+    zIndex: 1200,
+    backgroundColor: '#fff',
+    color: '#1976d2',
+    border: '1px solid #1976d2',
+    '&:hover': {
+      backgroundColor: '#e3e3e3'
+    }
+  }}
+  startIcon={<ArrowBackIcon />}
+>
+  חזור
+</Button>
   );
-};
+}
+
+function App() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <Router>
+      <BackButton />
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/personal-area/:id" element={<PersonalArea />} />
+        <Route path="/branches" element={<Branches />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/appointments" element={<Appointments />} />
+        <Route path="/worker-area/:id" element={<WorkerArea />} />
+      </Routes>
+    </Router>
+  );
+}
 
 export default App;
-

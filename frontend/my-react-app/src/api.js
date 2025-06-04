@@ -1,19 +1,3 @@
-// export const fetchData = async () => {
-//     const response = await fetch("https://dummyjson.com/products/category/mobile-accessories");
-//     const result = await response.json();
-//     return result.products;
-// }
-
-// export const fetchData = async () => {
-//     return new Promise((resolve) => {
-//         setTimeout(async () => {
-//             const response = await fetch('https://jsonplaceholder.typicode.com/users');
-//             const result = await response.json();
-//             resolve(result);
-
-//         }, 3000);
-//     });
-// };
 export const fetchData = async () => {
     return new Promise((resolve, reject) => {
         setTimeout(async () => {
@@ -30,6 +14,37 @@ export const fetchData = async () => {
             } catch (error) {
                 reject(error.message);
             }
-        }, 3000);
+        }, 1000);
     });
 };
+export const handleAddCustomer = async () => {
+    try {
+      const response = await fetch('http://localhost:5067/api/Customer/add', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ ...formData, message }), // שליחת הנתונים כולל ההודעה
+      });
+  
+      if (response.ok) {
+        setSuccessMessage('!הלקוח נוסף בהצלחה');
+        setErrorMessage('');
+        setFormData({
+          id: '',
+          firstName: '',
+          lastName: '',
+          phone: '',
+        });
+        setMessage(''); // איפוס ההודעה
+      } else {
+        const errorData = await response.json();
+        setSuccessMessage('');
+        setErrorMessage(errorData.message || '.שגיאה בהוספת הלקוח');
+      }
+    } catch (err) {
+      console.error(err);
+      setSuccessMessage('');
+      setErrorMessage('.שגיאה בשרת');
+    }
+  };
