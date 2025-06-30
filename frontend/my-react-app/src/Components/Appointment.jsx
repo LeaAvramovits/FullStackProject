@@ -9,12 +9,12 @@ import { useSelector } from "react-redux";
 function getRandomImage() {
   // דוגמה לתמונה רנדומלית (Unsplash או randomuser)
   const imgs = [
-    'https://randomuser.me/api/portraits/men/32.jpg',
-    'https://randomuser.me/api/portraits/women/44.jpg',
-    'https://randomuser.me/api/portraits/men/65.jpg',
-    'https://randomuser.me/api/portraits/women/65.jpg',
-    'https://randomuser.me/api/portraits/men/12.jpg',
-    'https://randomuser.me/api/portraits/women/23.jpg',
+    'https://randomuser.me/api/portraits/men/30.jpg',
+    'https://randomuser.me/api/portraits/men/44.jpg',
+    'https://randomuser.me/api/portraits/men/68.jpg',
+    'https://randomuser.me/api/portraits/men/60.jpg',
+    'https://randomuser.me/api/portraits/men/19.jpg',
+    'https://randomuser.me/api/portraits/men/29.jpg',
   ];
   return imgs[Math.floor(Math.random() * imgs.length)];
 }
@@ -36,9 +36,10 @@ function Appointments() {
     fetch('http://localhost:5067/api/Worker')
       .then(res => res.json())
       .then(data => {
-        // הוספת תמונה רנדומלית אם אין לכל עובד
+        // תיקון המפתח השגוי והוספת תמונה רנדומלית אם אין לכל עובד
         const withImages = data.map(worker => ({
           ...worker,
+          firstName: worker.fisrName, // תיקון המפתח
           imageUrl: worker.imageUrl || getRandomImage(),
         }));
         setWorkers(withImages);
@@ -59,10 +60,10 @@ function Appointments() {
   ];
 
   // Worker name
-  const getWorkerName = (workerId) => {
-    const worker = workers.find(w => String(w.id) === String(workerId));
-    return worker ? `${worker.firstName} ${worker.lastName}` : `Worker #${workerId}`;
-  };
+  // const getWorkerName = (workerId) => {
+  //   const worker = workers.find(w => String(w.id) === String(workerId));
+  //   return worker ? `${worker.firstName} ${worker.lastName}` : `Worker #${workerId}`;
+  // };
 
   // Appointments for selected worker
   const appointmentsForWorker = filteredAppointments.filter(
@@ -91,7 +92,7 @@ function Appointments() {
         alert('שגיאה בעדכון התור');
       }
     } catch (err) {
-      alert('שגיאת רשת');
+      alert(err,'שגיאת רשת');
     }
   };
 

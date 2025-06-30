@@ -53,7 +53,7 @@ const ContantPage = () => {
       }
     } catch (error) {
       setSuccessMessage('');
-      setErrorMessage('שגיאה בשרת.');
+      setErrorMessage(error,'שגיאה בשרת.');
     }
   };
 

@@ -9,6 +9,7 @@ import AddCircleIcon from '@mui/icons-material/AddCircle';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
+import dayjs from 'dayjs';
 
 const PersonalArea = () => {
   const { id } = useParams();
@@ -32,7 +33,7 @@ const PersonalArea = () => {
           setError('לא נמצאו פרטי לקוח');
         }
       } catch (err) {
-        setError('שגיאה בשרת');
+        setError(err,'שגיאה בשרת');
         setCustomerDetails(null);
       }
     };
@@ -43,16 +44,18 @@ const PersonalArea = () => {
     setShowAppointments(true);
     setShowDetails(false);
     try {
-      const response = await fetch(`http://localhost:5067/api/Customer/AppList/${id}`);
+      const response = await fetch('http://localhost:5067/api/Appointment'); // קריאה לרשימת התורים הכללית
       if (response.ok) {
         const data = await response.json();
-        setAppointments(data);
+        // סינון התורים לפי תעודת הזהות של הלקוח הנוכחי
+        const filteredAppointments = data.filter(appt => String(appt.customerId) === String(id));
+        setAppointments(filteredAppointments);
         setError('');
       } else {
         setError('שגיאה בטעינת התורים');
       }
     } catch (err) {
-      setError('שגיאה בשרת');
+      setError(err,'שגיאה בשרת');
     }
   };
 
@@ -137,13 +140,22 @@ const PersonalArea = () => {
             <Typography color="text.secondary">אין תורים להצגה</Typography>
           ) : (
             <Stack spacing={2}>
-              {appointments.map(appt => (
-                <Paper key={appt.id} elevation={1} sx={{ p: 2, textAlign: 'right' }}>
-                  <Typography>תאריך: {new Date(appt.date).toLocaleDateString()}</Typography>
-                  <Typography>שעה: {new Date(appt.date).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</Typography>
-                  {/* אפשר להציג שדות נוספים כאן */}
-                </Paper>
-              ))}
+              {appointments.map(appt => {
+                const appointmentDate = dayjs(appt.appointmentsTime); // שימוש ב-appointmentsTime
+                if (!appointmentDate.isValid()) {
+                  return (
+                    <Paper key={appt.id} elevation={1} sx={{ p: 2, textAlign: 'right' }}>
+                      <Typography color="error">תאריך לא תקין</Typography>
+                    </Paper>
+                  );
+                }
+                return (
+                  <Paper key={appt.id} elevation={1} sx={{ p: 2, textAlign: 'right' }}>
+                    <Typography>תאריך: {appointmentDate.format('DD/MM/YYYY')}</Typography>
+                    <Typography>שעה: {appointmentDate.format('HH:mm')}</Typography>
+                  </Paper>
+                );
+              })}
             </Stack>
           )}
           <Button
